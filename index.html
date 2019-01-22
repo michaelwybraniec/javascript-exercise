@@ -11,7 +11,6 @@
 
     function sayHello(a) {
         var hello = "Hello " + a + ", how are you?";
-
         return hello;
     }
     console.log(sayHello("Michael"));
@@ -25,12 +24,9 @@
     // (ex: opposite(true) should return false)
 
     function opposite(bool) {
-        // HELP : here I want you to use an if/else conditionnal statement
         if (bool == true) {
-            // TODO: insert code here
             return false
         } else {
-            // TODO: insert code here
             return true
         }
     }
@@ -44,15 +40,11 @@
     // (ex: greaterThan(10, 3) should return true because 10 is greater than 3)
 
     function greaterThan(a, b) {
-        // HELP : here I want you to use an if/else conditionnal statement
         if (a > b) {
-            // TODO: insert code here
             return true
         } else if (a < b) {
-            // TODO: insert code here
             return false
         } else {
-            // TODO: insert code here 
             return false
         }
     }
@@ -68,11 +60,10 @@
     function spam(word, nbr) {
         // HELP : here I want you to use a 'for' 
         var result = "";
-        for ( /** TODO: insert code here */ i = 0; i < nbr; i++) { // i dont know i got that but it works 
-            result += word;
-            // result = result + word ?
+        for (i = 0; i < nbr; i++) {
+            result += word; // result = result + word ?
         }
-        return result; // 
+        return result;
     }
     console.log(spam("Dog", 3));
     console.log(spam("Michael is a noob at Street Fighter - ", 5)); // Lol.
@@ -84,20 +75,12 @@
     // (ex: sumOfPreviousNumbers(3) should return 6 (1+2+3))
 
     function sumOfPreviousNumbers(nbr) {
-        // HELP : here I want you to use a 'for' loop
-        for (i = 0; i < nbr; i++)
-            var result = 0;
-
-        for ( /** TODO: insert code here */ i = 0; i < nbr; i++) {
-            // TODO: insert code here
-            {
-                result += i;
-            }
+        var result = 0;
+        for (i = 0; i < nbr; i++) {
+            result += i; // result += i pcq "i" is integer ? 
         }
-
         return result;
     }
-
     console.log(" Sum of previous numbers of 10 : " + sumOfPreviousNumbers(10));
     console.log(" Sum of previous numbers of 4 : " + sumOfPreviousNumbers(4));
     console.log(" Sum of previous numbers of 999 : " + sumOfPreviousNumbers(999));
@@ -109,16 +92,12 @@
     // (ex: previousNumbersToArray(3) should return [1, 2, 3])
 
     function previousNumbersToArray(nbr) {
-        // HELP : here I want you to use a 'for' loop
         var result = [];
-
-        for ( /** TODO: insert code here */ ) {
-            // TODO: insert code here
+        for (i = 0; i < nbr; i++) {
+            result += i;
         }
-
         return result;
     }
-
     console.log(" Here are all the numbers from 1 to 8 : " + previousNumbersToArray(8));
     console.log(" Here are all the numbers from 1 to 17 : " + previousNumbersToArray(17));
 
