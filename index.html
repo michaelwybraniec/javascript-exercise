@@ -6,76 +6,128 @@
 <body></body>
 
 <script>
-    // <script src="js.js">  
+    // Create a function 'sayHello' that returns 'Hello [name], how are you?' 
+    // (ex: sayHello("Michael") should return 'Hello Michael, how are you?')
+
     function sayHello(a) {
-        var hello = "Hello " + a + "How are you?";
+        var hello = "Hello " + a + ", how are you?";
+
         return hello;
     }
-    var name = "Michael ";
-    console.log(sayHello(name));
+    console.log(sayHello("Michael"));
+    console.log(sayHello("Gael"));
+    console.log(sayHello("Neil Armstrong"));
 
 </script>
 
 <script>
-    function opposite(false) {
-        var boolean = true;
-        return boolean;
-    }
-    var a = true;
-    console.log(opposite(a));
+    // Create a function called 'opposite' that returns the opposite of a given boolean 
+    // (ex: opposite(true) should return false)
 
-</script>
-
-<script>
-    function greaterThan() {
-        var x = (3 < 10)
-        return x
-    }
-    console.log(greaterThan());
-
-</script>
-
-<script>
-    function spam() {
-        var x = "Dog";
-        var y = x + x + x;
-        return y;
-    }
-    console.log(spam());
-
-</script>
-
-<script>
-    function sumOfPreviousNumbers() {
-        var x = [1, 2, 3];
-        var y = 6 + "[" + x + "]";
-        return y;
-    }
-    console.log(sumOfPreviousNumbers());
-
-</script>
-
-<script>
-    function previousNumbersToArray() {
-        var x = 1;
-        var y = 2;
-        var z = 3;
-        return [x, y, z];
-    }
-    console.log(previousNumbersToArray());
-
-</script>
-
-<script>
-    function contains() {
-        var Michael = ["Gael", "Romane", "Michel"];
-        var ifContqins; {
-            if (Michael = ["Gael", "Romane", "Michel"]);
-            ifContains = true;
+    function opposite(bool) {
+        // HELP : here I want you to use an if/else conditionnal statement
+        if (bool == true) {
+            // TODO: insert code here
+            return false
+        } else {
+            // TODO: insert code here
+            return true
         }
-        return ifContains
     }
-    console.log(contains());
+    console.log("The opposite of true is : " + opposite(true));
+    console.log("The opposite of false is : " + opposite(false));
+
+</script>
+
+<script>
+    // Create a function called 'greaterThan' that returns true if the first input parameter is greater than the second, false otherwise
+    // (ex: greaterThan(10, 3) should return true because 10 is greater than 3)
+
+    function greaterThan(a, b) {
+        // HELP : here I want you to use an if/else conditionnal statement
+        if (a > b) {
+            // TODO: insert code here
+            return true
+        } else if (a < b) {
+            // TODO: insert code here
+            return false
+        } else {
+            // TODO: insert code here 
+            return false
+        }
+    }
+    console.log("Is 4 greater than 6 ? " + greaterThan(4, 6));
+    console.log(" Is 25 greater than 23 ? " + greaterThan(25, 23));
+
+</script>
+
+<script>
+    // Create a function called 'spam' that will log X times a given word
+    // (ex: spam(" Dog", 3) will log "DogDogDog" (don't bother with spaces or line carriages here, it's just about the word)) function spam(word, nbr) { // HELP : here I want you to use a 'for' loop var result="" ; for(/** TODO: insert code here */){ result +=word; } return result; } console.log(spam("Dog", 3)); console.log(spam("Michael is a noob at Street Fighter - ", 5));
+
+    function spam(word, nbr) {
+        // HELP : here I want you to use a 'for' 
+        var result = "";
+        for ( /** TODO: insert code here */ i = 0; i < nbr; i++) { // i dont know i got that but it works 
+            result += word;
+            // result = result + word ?
+        }
+        return result; // 
+    }
+    console.log(spam("Dog", 3));
+    console.log(spam("Michael is a noob at Street Fighter - ", 5)); // Lol.
+
+</script>
+
+<script>
+    // Create a function called 'sumOfPreviousNumbers' which returns the sum of all previous numbers from a given number
+    // (ex: sumOfPreviousNumbers(3) should return 6 (1+2+3))
+
+    function sumOfPreviousNumbers(nbr) {
+        // HELP : here I want you to use a 'for' loop
+        for (i = 0; i < nbr; i++)
+            var result = 0;
+
+        for ( /** TODO: insert code here */ i = 0; i < nbr; i++) {
+            // TODO: insert code here
+            {
+                result += i;
+            }
+        }
+
+        return result;
+    }
+
+    console.log(" Sum of previous numbers of 10 : " + sumOfPreviousNumbers(10));
+    console.log(" Sum of previous numbers of 4 : " + sumOfPreviousNumbers(4));
+    console.log(" Sum of previous numbers of 999 : " + sumOfPreviousNumbers(999));
+
+</script>
+
+<script>
+    // Create a function called 'previousNumbersToArray' which returns an array with all previous numbers from a given number
+    // (ex: previousNumbersToArray(3) should return [1, 2, 3])
+
+    function previousNumbersToArray(nbr) {
+        // HELP : here I want you to use a 'for' loop
+        var result = [];
+
+        for ( /** TODO: insert code here */ ) {
+            // TODO: insert code here
+        }
+
+        return result;
+    }
+
+    console.log(" Here are all the numbers from 1 to 8 : " + previousNumbersToArray(8));
+    console.log(" Here are all the numbers from 1 to 17 : " + previousNumbersToArray(17));
+
+</script>
+
+
+<script>
+    // Create a function called 'contains' that returns true if an array contains a given word, false otherwise
+    // (ex: contains(" Michael", ["Gael", "Romane" , "Michael" ]) should return true) function contains(word, array) { // HELP : here I want you to use a 'for' loop to loop on the array and go through it for(/** TODO: insert code here */){ // TODO: insert code here } return false; } console.log("Is 'Michael' in the array? " + contains(" Michael", ["Gael", "Romane" , "Michael" ])); console.log("Is 'Street Fighter in the array? " + contains("Street Fighter", ["Mario Kart", "Portal", "Rocksmith", "GTA", "Zelda"]));
 
 </script>
 
