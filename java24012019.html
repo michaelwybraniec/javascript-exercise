@@ -1,0 +1,93 @@
+<script>
+    //Create a function called 'evenNumbers' that will log all even numbers from 0 to X (ex: evenNumbers(7) should log '2 4 6')
+
+    function evenNumbers(nbr) {
+        var result = [];
+        for (var i = 0; i <= nbr; i = i + 2) {
+            result.push(i);
+        }
+        return result;
+    }
+    console.log(" All even numbers : " + evenNumbers(10));
+
+
+    //Create a function called 'oddNumbers' that will log all odd numbers from 0 to X (ex: oddNumbers(7) should log '1 3 5 7')
+
+    function oddNumbers(nbr) {
+        var result = [];
+        for (var i = 1; i <= nbr; i = i + 2) {
+            result.push(i);
+        }
+        return result;
+    }
+    console.log(" All odd numbers : " + oddNumbers(10));
+
+
+    //Create a function called 'toArray' that will put 5 elements into an array and return this array (ex: toArray(3, 4, 8, 9, 0) should return the following array : [3, 4, 8, 9, 0])
+
+    function toArray(a, b, c, d, e) {
+        var myArray = []
+        myArray.push(a, b, c, d, e)
+        return myArray;
+    }
+    console.log(" Put 5 elements into an array : " + toArray(3, 4, 8, 9, 0));
+
+
+    //Create a function called 'removeFirst' that will remove the first element from an array and return it (ex: removeFirst([3, 4, 8, 9, 0]) should return [4, 8, 9, 0])
+
+    function removeFirst(a, b, c, d, e) {
+        var myArray2 = [a, b, c, d, e];
+        myArray2.shift();
+        return myArray2;
+    }
+    console.log(" Remove the first element of 3, 4, 8, 9, 0 : " + removeFirst(3, 4, 8, 9, 0, 2));
+
+
+    //Create a function called 'removeLast' that will remove the last element from an array and return it (ex: removeLast([3, 4, 8, 9, 0]) should return [3, 4, 8, 9])
+
+    function removeLast(a, b, c, d, e) {
+        var myArray3 = [a, b, c, d, e];
+        myArray3.pop();
+        return myArray3;
+    }
+    console.log(" Remove the last element of 3, 4, 8, 9, 0 : " + removeLast(3, 4, 8, 9, 0));
+
+    
+    
+
+    console.log("===================")
+
+// how to make flexible array input ?
+
+    function removeFirst(a) {
+        var myArray4 = [a, b];
+        myArray4.shift();
+        return myArray4;
+    }
+    console.log(" Remove the first element of 3, 4, 8, 9, 0 : " + removeFirst(3, 4, 8, 9, 0, 2));
+    
+// how to make flexible array input ?
+
+    console.log("===================")
+    
+    
+    
+    
+    //Create a function called 'logAll' that will log all elements from an array (ex: logAll(["Michael", "Romane", "Arnaud"] should log "Michael Romane Arnaud")
+    
+    
+
+
+</script>
+
+
+
+
+
+
+
+//Create a function called 'logAllDesc' that will log all elements from an array in descending order (ex: logAll(["Michael", "Romane", "Arnaud"] should log "Arnaud Romane Michael")
+
+//!\ Reminders : I don't care about the spaces or lines carriages when you log things. I just care about the raw result. Also don't forget the first element in an array is at index 0, not 1!
+
+</script>
