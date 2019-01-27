@@ -1,0 +1,354 @@
+<script>
+    // JS variables
+    var myInteger = 1; // Integer
+    var myText = "Some text"; // String = text
+    var myBoolean = true; // Boolean
+    var myArray = ["Element1-Index0", "Element2-Index1"]; // Array
+    var myFunction = function() {
+        console.log("I am a function");
+    }; // Function
+
+    // 'If' conditions
+    var a = 2;
+    var b = 4;
+    if (a > b) {
+        console.log("a is greater than b");
+    } else if (a === b) {
+        console.log("a equals b");
+    } else {
+        console.log("b is greater than a");
+    }
+
+    // (a == b) means tesing if a equals b, even if the types are different. Ex : (2 == "2") will return true
+    // (a === b) means tesing if a equals b, *and* making sure types are identical. Ex : (2 == "2") will return false, but (2 == 2) will return true
+
+
+
+
+
+    // 'For' loops
+    // Syntax : for(*declare variable*; *declare limit*; *declare increment*)
+
+    for (var i = 0; i < 10; i++) { // i++ is the same as i = i + 1. You could also write i += 2 to mean i = i + 2, i += 3 etc...
+        console.log("i = " + i);
+    }
+
+    // Reverse order
+    for (var i = 9; i >= 0; i--) {
+        console.log("i = " + i);
+    }
+
+    // Log all even numbers from 100 to 120
+    for (var i = 100; i <= 120; i += 2) {
+        console.log("i = " + i);
+    }
+
+
+
+
+
+    // Arrays 
+    var anotherArray = ["Element1-Index0", "Element2-Index1", "Element3-Index2", "Element4-Index3", "Element5-Index4", "Element6-Index5"];
+
+    // 6 elements => last index = 5
+    // x elements => last index = x-1
+
+    // Log the full array
+    console.log(anotherArray);
+
+    // Log the element of the array at index 3
+    console.log(anotherArray[3]);
+
+    // Log the size of the array
+    console.log(anotherArray.length);
+
+    // Log all elements of the array one by one
+    for (var i = 0; i < anotherArray.length; i++) {
+        console.log(anotherArray[i]);
+    }
+
+    // Log all elements of the array one by one in reverse order
+    for (var i = anotherArray.length - 1; i >= 0; i--) {
+        console.log(anotherArray[i]);
+    }
+
+    // Log one every two elements in the array
+    for (var i = 0; i < anotherArray.length; i += 2) {
+        console.log(anotherArray[i]);
+    }
+
+
+
+
+
+    // Functions
+    function add3Numbers(a, b, c) { // a, b and c are the inputs of the function. They are variables meant to represent what the user will feed later on
+        // Declare variables if needed
+        var x = 0;
+
+        // Do stuff here
+        x = a + b + c;
+
+        return x; // Return your result here if needed
+    };
+    console.log(add3Numbers(1, 2, 3));
+
+
+    function addXNumbers(arrayOfNumbers) {
+        var result = 0;
+
+        for (var i = 0; i < arrayOfNumbers.length; i++) {
+            result += arrayOfNumbers[i];
+        }
+        return result;
+    };
+    var anArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+    console.log(addXNumbers(anArray));
+
+
+
+
+
+
+    // Objects
+    var myObject = {
+        myObjectInteger: 4,
+        myObjectString: "Test",
+        myObjectBoolean: true,
+        myObjectArray: [1, 2, 3]
+    };
+
+    console.log("My object integer : " + myObject.myObjectInteger);
+    console.log("My object string : " + myObject.myObjectString);
+    console.log("My object boolean : " + myObject.myObjectBoolean);
+    console.log("My object array : " + myObject.myObjectArray);
+
+    myObject.myObjectArray.push(4);
+    console.log("My object array : " + myObject.myObjectArray);
+
+
+    // console.log("");
+    // console.log("");
+    // console.log("Exercise : 26.01.2019 ");
+
+    var database = {
+        users: []
+    };
+
+    // 1) Create a function 'insert' that can insert a user in the database, and use it to insert the following users : 
+    // => insert({name: "Michael", age: 30, nat: "PO"});
+    // => insert({name: "Gael", age: 20, nat: "FR"});
+    // => insert({name: "Ian", age: 15, nat: "FR"});
+    // => insert({name: "PizzaPresto", age: 50, nat: "IT"});
+    // => insert({name: "Adolf", age: 50, nat: "GE"});
+    // => insert({name: "Heinrich", age: 70, nat: "GE"});
+
+    function insert(user) {
+        database.users.push(user);
+    };
+
+    insert({
+        name: "Michael",
+        age: 30,
+        nat: "PO"
+    });
+    insert({
+        name: "Gael",
+        age: 20,
+        nat: "FR"
+    });
+    insert({
+        name: "Ian",
+        age: 15,
+        nat: "FR"
+    });
+    insert({
+        name: "PizzaPresto",
+        age: 50,
+        nat: "IT"
+    });
+    insert({
+        name: "Adolf",
+        age: 50,
+        nat: "GE"
+    });
+    insert({
+        name: "Heinrich",
+        age: 70,
+        nat: "GE"
+    });
+
+    console.log(database.users);
+
+    function insertMany(users) { // Users is going to be an array this time
+        for (var i = 0; i < users.length; i++) {
+            insert(users[i]); // ...but in the end we use the same function insert
+        }
+    };
+    insertMany([{
+        name: "Michael",
+        age: 30,
+        nat: "PO"
+    }, {
+        name: "Gael",
+        age: 20,
+        nat: "FR"
+    }]);
+
+
+    // 2) Create a function 'count' that will return the number of users in the database
+    // ex: count() should return 6 for the database above
+
+    function count() {
+        var result = [];
+        for (var i = 0; i <= database.users.length; i++) {
+            result = i;
+        }
+        return result
+    }
+    console.log("2.1 : " + count());
+
+    console.log("2.2 : " + database.users.length);
+
+
+    // 3) Create a function 'getByName' that will return a user (previously inserted in the database) provided his name
+    // ex: getByName("Michael") should return {name: "Michael", age: 30, nat: "PO"}
+
+    function getByName(name) {
+        var result = "";
+        for (var i = 0; i < database.users.length; i++) {
+            result += name[i];
+        }
+        return result
+    }
+    console.log("3.1 : " + getByName("Michael"));
+
+
+
+    function getByName2(name) {
+        var result = "";
+        for (var i = 0; i < database.users.length; i++) {
+            var user = database.users[i];
+            if (user.name == name) {
+                result = name[i];
+            }
+            return result
+        }
+    }
+    console.log("3.2 : " + getByName2("Michael"));
+
+
+
+
+
+    function getByName3(name) {
+        for (var i = 0; i < database.users.length; i++) {
+            var user = database.users[i];
+
+            if (user.name == name) {
+                return user;
+            }
+        }
+    }
+    console.log(getByName3("Michael")) // What if there are two users with the same name?
+
+
+
+    function getByName4(name) {
+        var user = "";
+        var results = {
+            result: []
+        };
+        for (var i = 0; i < database.users.length; i++) {
+            user = database.users[i];
+
+            if (user.name == name) {
+                results.result.push(user);
+            }
+        }
+        return results;
+    }
+    console.log(getByName4("Michael"));
+
+
+
+    // 4) Create a function 'getByNat' that will return an array of all users of a given nationality
+    // ex: getByNat("FR") should return [{name: "Gael", age: 20, nat: "FR"}, {name: "Ian", age: 15, nat: "FR"}]
+
+    function getByNat(nat) {
+        for (var i = 0; i < database.users.length; i++) {
+            var user = database.users[i];
+
+            if (user.nat == nat) {
+                return user;
+            }
+        }
+    }
+    console.log(getByNat("FR"));
+
+
+
+
+    // 5) Create a function 'getByAge' that will return an array of all users of a given age and above
+    // ex: getByAge(40) should return [{name: "PizzaPresto", age: 50, nat: "IT"}, {name: "Adolf", age: 50, nat: "GE"}, {name: "Heinrich", age: 70, nat: "GE"}];
+
+    function getByAge(age) {
+        var user = "";
+        var results = {
+            result: []
+        };
+        for (var i = 0; i < database.users.length; i++) {
+            user = database.users[i];
+
+            if (user.age >= age) {
+                results.result.push(user);
+            }
+        }
+        return results;
+    }
+    console.log(getByAge(40));
+
+
+
+
+    // 6) Create a function 'getNames' that will return an array of all the users' names in the database
+
+    // ex: getNames() should return ["Michael", "Gael", "Ian", "PizzaPresto", "Adolf", "Heinrich"] for the database above
+
+// wrong
+    function getNames() {
+      
+        var results = "";
+        for (var i = 0; i < database.users.length; i++) {
+            user = database.users[i];
+            results += results.push;
+        }
+        return results;
+    }
+    console.log(getNames());
+     
+
+
+    function getNames2() {
+        var user = "";
+        var results = {
+            result: []
+        };
+        for (var i = 0; i < database.users.length; i++) {
+            user = database.users[i];
+            results.result.push(user.name);
+        }
+        return results;
+    }
+    console.log(getNames2());
+
+
+
+
+
+    // 7) Create a function 'removeByName' that will remove a user from the database, prodided his name
+    // => ex: removeByName("Gael") should remove the user {name: "Gael", age: 20, nat: "FR"} from the database above
+
+    // TODO : code here
+
+</script>
