@@ -1,0 +1,242 @@
+<script>
+    // !!! YOU SHALL ONLY CODE WHERE NOTED !!!
+    var database = {
+        users: [{
+            id: 1,
+            name: "Gael"
+        }, {
+            id: 2,
+            name: "Michael"
+        }, {
+            id: 3,
+            name: "Romane"
+        }, {
+            id: 4,
+            name: "Ian"
+        }],
+        books: [{
+            ownerId: 2,
+            title: "Harry Potter"
+        }, {
+            ownerId: 1,
+            title: "Lord of the rings"
+        }, {
+            ownerId: 4,
+            title: "Narnia"
+        }, {
+            ownerId: 3,
+            title: "Hunger games"
+        }]
+    };
+    // Our database has evolved! We now have users *AND* books!
+    // Users have a unique id so that we can link them in the books collection. For example if a book has 'ownerId: 1', it means that
+    // it is owned by user with id: 1, so it would be Gael in that particular scenario.
+    // Of course, id has to be unique (you should never have 2 users with the same id, otherwise we wouldn't know who the book belongs to)
+    // 1) Create a function 'countUsers' that will return the number of users in the database
+    function countUsers() {
+        // TODO : code here
+        var result = database.users.length
+        return result
+    };
+    console.log("Numbers of users : " + countUsers());
+    // 2) Create a function 'countBooks' that will return the number of books in the database
+    function countBooks() {
+        // TODO : code here
+        var result = database.books.length
+        return result
+    };
+    console.log("Numbers of books : " + countBooks());
+    // 3) Create a function 'insert' that will insert a user in the database and assign him a new id, provided a name
+    // TODO : code here
+    /*
+        
+    1. Created variable with the object with a new 'id' to insert in the database.users.
+        
+    2. pushed result to database with the required name
+    3. Console result: 
+       Users after insertion : [object Object],[object Object],[object Object],[object Object],[object Object]
+       
+    I can see that there are 5 objects, however, return is not showing the object details, unless I delete part ("Users after insertion : " +) form the console.log("Users after insertion : " + database.users); Why?
+        
+    */
+    /*
+    How to create new id without hardcoding, thaking under consideration instruction '// !!! YOU SHALL ONLY CODE WHERE NOTED !!!' my current solution is:
+        
+    Solution 1)
+        
+    function insert(name) {
+        
+      var newID = 0;
+      var result = {
+          id: newID,
+          name: name
+      }
+      for (var i = 0; i <= database.users.length; i++) {
+      newID = database.users.length[i] + 1
+      }
+      
+      database.users.push(result)
+    };
+    insert("Arnaud");
+    console.log("Users after insertion : " + JSON.stringify(database.users));
+        
+    solution 2)
+        
+     function insert(name) {
+        
+      var newID = database.user.length + 1;
+      var result = {
+          id: newID,
+          name: name
+      }
+      
+      database.users.push(result)
+    };
+    insert("Arnaud");
+    console.log("Users after insertion : " + JSON.stringify(database.users));
+        
+    */
+    function insert(name) {
+        var newID = database.users.length + 1;
+        var result = {
+            id: newID,
+            name: name
+        }
+        database.users.push(result)
+    };
+    insert("Arnaud");
+    console.log(database.users);
+    console.log("Users after insertion : " + JSON.stringify(database.users));
+    // 4) Create a function 'getUserByName' that will return a user provided his name
+    function getUserByName(name) {
+        // TODO : code here
+        for (var i = 0; i < database.users.length; i++) {
+            var user = database.users[i];
+            if (user.name == name) {
+                return user;
+            }
+        }
+    };
+    console.log(getUserByName("Romane"));
+    console.log("Who have eaten all crisps is the database? : " + JSON.stringify(getUserByName("Romane")));
+    // 5) Create a function 'getBookByTitle' that will return a book provided its title
+    function getBookByTitle(title) {
+        // TODO : code here
+        for (var i = 0; i < database.books.length; i++) {
+            var user = database.books[i];
+            if (user.title == title) {
+                return user.ownerId;
+            }
+        }
+    };
+    console.log(getBookByTitle("Narnia"));
+    console.log("An ownerId of the book 'Narnia' is : " + JSON.stringify(getBookByTitle("Narnia")));
+    // 6) Create a function 'getBookByOwnerId' that will return a book provided its ownerId
+    function getBookByOwnerId(ownerId) {
+        // TODO : code here
+        for (var i = 0; i < database.books.length; i++) {
+            var book = database.books[i];
+            if (book.ownerId == ownerId) {
+                return book.title;
+            }
+        }
+    };
+    console.log(getBookByOwnerId(1));
+    console.log("What is the book with an Id '1' ? : " + JSON.stringify(getBookByOwnerId(1)));
+    // 7) Create a function 'getBook' that will return the book of a user provided his name
+    function getBook(name) {
+        for (var i = 0; i < database.users.length; i++) {
+            var user = database.users[i];
+            if (user.name === name) {
+                for (var j = 0; j < database.books.length; j++) {
+                    var book = database.books[j];
+                    if (user.id === book.ownerId) {
+                        return book;
+                    }
+                }
+            }
+        }
+    };
+    console.log(getBook("Romane"));
+    console.log("Romane's book : " + JSON.stringify(getBook("Romane")));
+    // 8) Create a function 'getOwner' that will return the owner of a book, provided its title
+    function getOwner(title) {
+        for (var i = 0; i < database.books.length; i++) {
+            var book = database.books[i];
+            if (book.title === title) {
+                for (var j = 0; j < database.users.length; j++) {
+                    var user = database.users[j];
+                    if (book.ownerId === user.id) {
+                        return user;
+                    }
+                }
+            }
+        }
+    };
+    console.log(getOwner("Harry Potter"));
+    console.log("Harry Potter has been burnt by : " + JSON.stringify(getOwner("Harry Potter")));
+    // 9-Bonus) Create a function 'removeUser' that will remove a user from the database, along with his book (provided the user's name)
+    /*
+    
+    // Solution 1
+    function removeUser(name) {
+        // TODO : code here
+        for (var i = 0; i < database.users.length; i++) {
+            var user = database.users[i];
+            if (name.title == name) {
+                for (var j = 0; j < database.books.length; j++) {
+                    var book = database.users[j];
+                }
+                var toRemove = user + book;
+            }
+        }
+        database.books.delete(book);
+        database.users.delete(user);
+    };
+    removeUser("Gael");
+    console.log("Users after removal : " + database.users);
+    console.log("Books after removal : " + database.books);
+*/
+    /*
+        // Solution 2
+        function removeUser(name) {
+            // TODO : code here
+            for (var i = 0; i = database.users.length; i++); {
+                var user = database.users[i];
+                if (user.name === name) {
+                    for (var j = 0; j < database.books.length; j++) {
+                        var book = database.books[j];
+                    }
+                    var DeleteUser = {
+                        id: user.id,
+                        name: name
+                    }
+                }
+                var DeleteBook = {
+                    ownerId: book.ownerId,
+                    title: book.title
+                }
+            }
+            database.users.*COMMAND*(DeleteBook)
+            database.users.*COMMAND*(DeleteUser)
+            
+        */
+    function removeUser(name) {
+        // TODO : code here
+        for (var i = 0; i < database.users.length; i++) {
+            var user = database.users[i];
+            if (user.name === name) {
+                for (var j = 0; j < database.books.length; j++) {
+                    var book = database.books[j];
+                }
+            }
+        }
+        database.books.*CODE * (book);
+        database.users.*CODE * (user);
+    };
+    removeUser("Gael");
+    console.log("Users after removal : " + database.users);
+    console.log("Books after removal : " + database.books);
+    console.log(database.users);
+    console.log(database.books);
+</script>
