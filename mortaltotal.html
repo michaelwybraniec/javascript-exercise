@@ -1,0 +1,648 @@
+<script>
+    //Create a function called 'evenNumbers' that will log all even numbers from 0 to X (ex: evenNumbers(7) should log '2 4 6')
+    function evenNumbers(nbr) {
+        var result = [];
+        for (var i = 0; i <= nbr; i = i + 2) {
+            result.push(i);
+        }
+        return result;
+    }
+    console.log(" All even numbers : " + evenNumbers(10));
+
+
+    //Create a function called 'oddNumbers' that will log all odd numbers from 0 to X (ex: oddNumbers(7) should log '1 3 5 7')
+    function oddNumbers(nbr) {
+        var result = [];
+        for (var i = 1; i <= nbr; i = i + 2) {
+            result.push(i);
+        }
+        return result;
+    }
+    console.log(" All odd numbers : " + oddNumbers(10));
+
+
+    //Create a function called 'toArray' that will put 5 elements into an array and return this array 
+    //(ex: toArray(3, 4, 8, 9, 0) should return the following array : [3, 4, 8, 9, 0])
+    function toArray(a, b, c, d, e) {
+        var myArray = []
+        myArray.push(a, b, c, d, e)
+        return myArray;
+    }
+    console.log(" Put 5 elements into an array : " + toArray(3, 4, 8, 9, 0));
+
+
+    //Create a function called 'removeFirst' that will remove the first element from an array and return it 
+    //(ex: removeFirst([3, 4, 8, 9, 0]) should return [4, 8, 9, 0])
+    function removeFirst(a, b, c, d, e) {
+        var myArray2 = [a, b, c, d, e];
+        myArray2.shift();
+        return myArray2;
+    }
+    console.log(" Remove the first element of 3, 4, 8, 9, 0 : " + removeFirst(3, 4, 8, 9, 0, 2));
+
+
+    //Create a function called 'removeLast' that will remove the last element from an array and return it 
+    //(ex: removeLast([3, 4, 8, 9, 0]) should return [3, 4, 8, 9])
+    function removeLast(a, b, c, d, e) {
+        var myArray3 = [a, b, c, d, e];
+        myArray3.pop();
+        return myArray3;
+    }
+    console.log(" Remove the last element of 3, 4, 8, 9, 0 : " + removeLast(3, 4, 8, 9, 0));
+
+
+
+    //Create a function called 'logAll' that will log all elements from an array (ex: logAll(["Michael", "Romane", "Arnaud"] should log "Michael Romane Arnaud")
+
+
+    
+    
+    
+    
+
+    //Create a function called 'logAllDesc' that will log all elements from an array in descending order (ex: logAll(["Michael", "Romane", "Arnaud"] should log "Arnaud Romane Michael")
+
+
+    
+    
+    
+    
+    
+    
+    
+
+
+    // Create a function 'sayHello' that returns 'Hello [name], how are you?' 
+    // (ex: sayHello("Michael") should return 'Hello Michael, how are you?')
+    function sayHello(a) {
+        var hello = "Hello " + a + ", how are you?";
+        return hello;
+    }
+    console.log(sayHello("Michael"));
+    console.log(sayHello("Gael"));
+    console.log(sayHello("Neil Armstrong"));
+
+    >
+    // Create a function called 'opposite' that returns the opposite of a given boolean 
+    // (ex: opposite(true) should return false)
+    function opposite(bool) {
+        if (bool == true) {
+            return false
+        } else {
+            return true
+        }
+    }
+    console.log("The opposite of true is : " + opposite(true));
+    console.log("The opposite of false is : " + opposite(false));
+
+
+    // Create a function called 'greaterThan' that returns true if the first input parameter is greater than the second, false otherwise
+    // (ex: greaterThan(10, 3) should return true because 10 is greater than 3)
+    function greaterThan(a, b) {
+        if (a > b) {
+            return true
+        } else if (a < b) {
+            return false
+        } else {
+            return false
+        }
+    }
+    console.log("Is 4 greater than 6 ? " + greaterThan(4, 6));
+    console.log(" Is 25 greater than 23 ? " + greaterThan(25, 23));
+
+
+    // Create a function called 'spam' that will log X times a given word
+    // (ex: spam(" Dog", 3) will log "DogDogDog" (don't bother with spaces or line carriages here, it's just about the word)) function spam(word, nbr) { // HELP : here I want you to use a 'for' loop var result="" ; for(/** TODO: insert code here */){ result +=word; } return result; } console.log(spam("Dog", 3)); console.log(spam("Michael is a noob at Street Fighter - ", 5));
+    function spam(word, nbr) {
+        // HELP : here I want you to use a 'for' 
+        var result = "";
+        for (i = 0; i < nbr; i++) {
+            result += word; // result = result + word ?
+        }
+        return result;
+    }
+    console.log(spam("Dog", 3));
+    console.log(spam("Michael is a noob at Street Fighter - ", 5)); // Lol.
+
+
+    // Create a function called 'sumOfPreviousNumbers' which returns the sum of all previous numbers from a given number
+    // (ex: sumOfPreviousNumbers(3) should return 6 (1+2+3))
+    function sumOfPreviousNumbers(nbr) {
+        var result = 0;
+        for (i = 0; i <= nbr; i++) {
+            result += i; // result += i pcq "i" is integer ? 
+        }
+        return result;
+    }
+    console.log(" Sum of previous numbers of 10 : " + sumOfPreviousNumbers(10));
+    console.log(" Sum of previous numbers of 4 : " + sumOfPreviousNumbers(4));
+    console.log(" Sum of previous numbers of 999 : " + sumOfPreviousNumbers(999));
+
+
+    // Create a function called 'previousNumbersToArray' which returns an array with all previous numbers from a given number
+    // (ex: previousNumbersToArray(3) should return [1, 2, 3])
+
+    function previousNumbersToArray(nbr) {
+        var result = [];
+        for (i = 0; i <= nbr; i = i + 1) {
+            result += i;
+        }
+        return result;
+    }
+    console.log(" Here are all the numbers from 1 to 8 : " + previousNumbersToArray(8));
+    console.log(" Here are all the numbers from 1 to 17 : " + previousNumbersToArray(17));
+
+
+
+    // Create a function called 'contains' that returns true if an array contains a given word, false otherwise
+    // (ex: contains(" Michael", ["Gael", "Romane" , "Michael" ]) should return true) function contains(word, array) {
+    // HELP : here I want you to use a 'for' loop to loop on the array and go through it for(/** TODO: insert code here */){ 
+    // TODO: insert code here } return false; } console.log("Is 'Michael' in the array? " + contains(" Michael", ["Gael", "Romane" , "Michael" ])); console.log("Is 'Street Fighter in the array? " + contains("Street Fighter", ["Mario Kart", "Portal", "Rocksmith", "GTA", "Zelda"]));
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // JS variables
+
+    var myInteger = 1; // Integer
+    var myText = "Some text"; // String = text
+    var myBoolean = true; // Boolean
+    var myArray = ["Element1-Index0", "Element2-Index1"]; // Array
+    var myFunction = function() {
+        console.log("I am a function");
+    };
+
+    // Function
+
+    // 'If' conditions
+
+    var a = 2;
+    var b = 4;
+    if (a > b) {
+        console.log("a is greater than b");
+    } else if (a === b) {
+        console.log("a equals b");
+    } else {
+        console.log("b is greater than a");
+    }
+
+    // (a == b) means tesing if a equals b, even if the types are different. Ex : (2 == "2") will return true
+    // (a === b) means tesing if a equals b, *and* making sure types are identical. Ex : (2 == "2") will return false, but (2 == 2) will return true
+    // 'For' loops
+    // Syntax : for(*declare variable*; *declare limit*; *declare increment*)
+    for (var i = 0; i < 10; i++) { // i++ is the same as i = i + 1. You could also write i += 2 to mean i = i + 2, i += 3 etc...
+        console.log("i = " + i);
+    }
+
+    // Reverse order
+    for (var i = 9; i >= 0; i--) {
+        console.log("i = " + i);
+    }
+
+    // Log all even numbers from 100 to 120
+    for (var i = 100; i <= 120; i += 2) {
+        console.log("i = " + i);
+    }
+
+
+    // Arrays 
+
+    var anotherArray = ["Element1-Index0", "Element2-Index1", "Element3-Index2", "Element4-Index3", "Element5-Index4", "Element6-Index5"];
+    // 6 elements => last index = 5
+    // x elements => last index = x-1
+    // Log the full array
+
+    console.log(anotherArray);
+
+    // Log the element of the array at index 3
+    console.log(anotherArray[3]);
+
+    // Log the size of the array
+    console.log(anotherArray.length);
+
+    // Log all elements of the array one by one
+    for (var i = 0; i < anotherArray.length; i++) {
+        console.log(anotherArray[i]);
+    }
+
+    // Log all elements of the array one by one in reverse order
+    for (var i = anotherArray.length - 1; i >= 0; i--) {
+        console.log(anotherArray[i]);
+    }
+
+    // Log one every two elements in the array
+    for (var i = 0; i < anotherArray.length; i += 2) {
+        console.log(anotherArray[i]);
+    }
+
+
+    // Functions
+
+    function add3Numbers(a, b, c) {
+        // a, b and c are the inputs of the function. 
+        //They are variables meant to represent what the user will feed later on
+        // Declare variables if needed
+        var x = 0;
+        // Do stuff here
+        x = a + b + c;
+        return x; // Return your result here if needed
+    };
+    console.log(add3Numbers(1, 2, 3));
+
+
+    function addXNumbers(arrayOfNumbers) {
+        var result = 0;
+        for (var i = 0; i < arrayOfNumbers.length; i++) {
+            result += arrayOfNumbers[i];
+        }
+        return result;
+    };
+    var anArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+    console.log(addXNumbers(anArray));
+
+
+    // Objects
+    var myObject = {
+        myObjectInteger: 4,
+        myObjectString: "Test",
+        myObjectBoolean: true,
+        myObjectArray: [1, 2, 3]
+    };
+
+    console.log("My object integer : " + myObject.myObjectInteger);
+    console.log("My object string : " + myObject.myObjectString);
+    console.log("My object boolean : " + myObject.myObjectBoolean);
+    console.log("My object array : " + myObject.myObjectArray);
+    myObject.myObjectArray.push(4);
+    console.log("My object array : " + myObject.myObjectArray);
+    // console.log("");
+    // console.log("");
+    // console.log("Exercise : 26.01.2019 ");
+
+
+    var database = {
+        users: []
+    };
+
+
+
+    // 1) Create a function 'insert' that can insert a user in the database, and use it to insert the following users : 
+
+    function insert(user) {
+        database.users.push(user);
+    };
+
+    insert({
+        name: "Michael",
+        age: 30,
+        nat: "PO"
+    });
+    insert({
+        name: "Gael",
+        age: 20,
+        nat: "FR"
+    });
+    insert({
+        name: "Ian",
+        age: 15,
+        nat: "FR"
+    });
+    insert({
+        name: "PizzaPresto",
+        age: 50,
+        nat: "IT"
+    });
+    insert({
+        name: "Adolf",
+        age: 50,
+        nat: "GE"
+    });
+    insert({
+        name: "Heinrich",
+        age: 70,
+        nat: "GE"
+    });
+
+    console.log(database.users);
+
+    function insertMany(users) {
+        // Users is going to be an array this time
+        for (var i = 0; i < users.length; i++) {
+            insert(users[i]);
+            // ...but in the end we use the same function insert
+        }
+    };
+
+    insertMany([{
+        name: "Michael",
+        age: 30,
+        nat: "PO"
+    }, {
+        name: "Gael",
+        age: 20,
+        nat: "FR"
+    }]);
+
+
+    // 2) Create a function 'count' that will return the number of users in the database
+    // ex: count() should return 6 for the database above
+
+    function count() {
+        var result = 0;
+        for (var i = 0; i <= database.users.length; i++) {
+            result = i;
+        }
+        return result;
+    }
+
+    function count(array) {
+        return array.length;
+    }
+    console.log(database.users.length);
+
+
+    // 3) Create a function 'getByName' that will return a user (previously inserted in the database) provided his name
+    // ex: getByName("Michael") should return {name: "Michael", age: 30, nat: "PO"}
+
+    function getByName(name) {
+        for (var i = 0; i < database.users.length; i++) {
+            var user = database.users[i];
+            if (user.name == name) {
+                return user;
+            }
+        }
+    }
+    console.log(getByName("Michael")) // What if there are two users with the same name?
+
+    function getByName2(name) {
+        var results = [];
+        for (var i = 0; i < database.users.length; i++) {
+            var user = database.users[i];
+            if (user.name == name) {
+                results.push(user);
+            }
+        }
+        return results;
+    }
+    console.log(getByName2("Michael"));
+
+
+    // 4) Create a function 'getByNat' that will return an array of all users of a given nationality
+    // ex: getByNat("FR") should return [{name: "Gael", age: 20, nat: "FR"}, {name: "Ian", age: 15, nat: "FR"}]
+
+    function getByNat(nat) {
+        for (var i = 0; i < database.users.length; i++) {
+            var user = database.users[i];
+            if (user.nat == nat) {
+                return user;
+            }
+        }
+    }
+    console.log(getByNat("FR"));
+
+
+    // 5) Create a function 'getByAge' that will return an array of all users of a given age and above
+    // ex: getByAge(40) should return [{name: "PizzaPresto", age: 50, nat: "IT"}, {name: "Adolf", age: 50, nat: "GE"}, {name: "Heinrich", age: 70, nat: "GE"}];
+
+    function getByAge(age) {
+        var results = [];
+        for (var i = 0; i < database.users.length; i++) {
+            var user = database.users[i];
+            if (user.age >= age) {
+                results.push(user);
+            }
+        }
+        return results;
+    }
+    console.log(getByAge(40));
+
+
+    // 6) Create a function 'getNames' that will return an array of all the users' names in the database
+    // ex: getNames() should return ["Michael", "Gael", "Ian", "PizzaPresto", "Adolf", "Heinrich"] for the database above
+
+    function getNames() {
+        var results = [];
+        for (var i = 0; i < database.users.length; i++) {
+            var user = database.users[i];
+            results.push(user.name);
+        }
+        return results;
+    }
+    console.log(getNames());
+
+
+    // 7) Create a function 'removeByName' that will remove a user from the database, prodided his name
+    // => ex: removeByName("Gael") should remove the user {name: "Gael", age: 20, nat: "FR"} from the database above
+    // TODO : code here  
+
+    function removeByName(name) {
+        // First I would create a result var
+        // Then I would loop through the array
+        // If blablabla
+    }
+
+</script>
+
+
+
+<script>
+    var database = {
+        users: [{
+            id: 1,
+            name: "Gael"
+        }, {
+            id: 2,
+            name: "Michael"
+        }, {
+            id: 3,
+            name: "Romane"
+        }, {
+            id: 4,
+            name: "Ian"
+        }],
+
+        books: [{
+            ownerId: 2,
+            title: "Harry Potter"
+        }, {
+            ownerId: 1,
+            title: "Lord of the rings"
+        }, {
+            ownerId: 4,
+            title: "Narnia"
+        }, {
+            ownerId: 3,
+            title: "Hunger games"
+        }]
+    };
+
+
+    // 1) Create a function 'countUsers' that will return the number of users in the database
+
+    function countUsers() {
+        var result = database.users.length
+        return result
+    };
+    console.log("Numbers of users : " + countUsers());
+    console.log("");
+
+
+    // 2) Create a function 'countBooks' that will return the number of books in the database
+
+    function countBooks() {
+        var result = database.books.length
+        return result
+    };
+    console.log("Numbers of books : " + countBooks());
+    console.log("");
+
+
+    // 3) Create a function 'insert' that will insert a user in the database and assign him a new id, provided a name
+
+    function insert(name) {
+        var newID = database.users.length + 1;
+        var result = {
+            id: newID,
+            name: name
+        }
+        database.users.push(result)
+    };
+    insert("Arnaud");
+    console.log(database.users);
+    console.log("Users after insertion : " + JSON.stringify(database.users));
+    console.log("");
+
+
+    // 4) Create a function 'getUserByName' that will return a user provided his name
+
+    function getUserByName(name) {
+        for (var i = 0; i < database.users.length; i++) {
+            var user = database.users[i];
+            if (user.name == name) {
+                return user;
+            }
+        }
+    };
+    console.log(getUserByName("Romane"));
+    console.log("Who have eaten all crisps is the database? : " + JSON.stringify(getUserByName("Romane")));
+    console.log("");
+
+
+    // 5) Create a function 'getBookByTitle' that will return a book provided its title
+
+    function getBookByTitle(title) {
+        for (var i = 0; i < database.books.length; i++) {
+            var book = database.books[i];
+            if (book.title == title) {
+                return book;
+            }
+        }
+    };
+    console.log(getBookByTitle("Narnia"));
+    console.log("An ownerId of the book 'Narnia' is : " + JSON.stringify(getBookByTitle("Narnia")));
+    console.log("");
+
+
+    // 6) Create a function 'getBookByOwnerId' that will return a book provided its ownerId
+
+    function getBookByOwnerId(ownerId) {
+        for (var i = 0; i < database.books.length; i++) {
+            var book = database.books[i];
+            if (book.ownerId == ownerId) {
+                return book;
+            }
+        }
+    };
+    console.log(getBookByOwnerId(1));
+    console.log("What is the book with an Id '1' ? : " + JSON.stringify(getBookByOwnerId(1)));
+    console.log("");
+
+
+    // 7) Create a function 'getBook' that will return the book of a user provided his name
+
+    function getBook(name) {
+        for (var i = 0; i < database.users.length; i++) {
+            var user = database.users[i];
+            if (user.name === name) {
+                for (var j = 0; j < database.books.length; j++) {
+                    var book = database.books[j];
+                    if (user.id === book.ownerId) {
+                        return book;
+                    }
+                }
+            }
+        }
+    };
+    console.log(getBook("Romane"));
+    console.log("Romane's book : " + JSON.stringify(getBook("Romane")));
+    console.log("");
+
+
+    // Super efficient crazy code:
+    function getQuickBook(name) {
+        var user = getUserByName(name);
+        return getBookByOwnerId(user.id);
+    }
+    console.log(getQuickBook("Romane"));
+    console.log("OMG!!!!!!!!!!!!!!!!! Romane's book : " + JSON.stringify(getQuickBook("Romane")));
+    console.log("");
+
+
+    // 8) Create a function 'getOwner' that will return the owner of a book, provided its title
+
+    function getOwner(title) {
+        for (var i = 0; i < database.books.length; i++) {
+            var book = database.books[i];
+            if (book.title === title) {
+                for (var j = 0; j < database.users.length; j++) {
+                    var user = database.users[j];
+                    if (book.ownerId === user.id) {
+                        return user;
+                    }
+                }
+            }
+        }
+    };
+    console.log(getOwner("Harry Potter"));
+    console.log("Harry Potter has been burnt by : " + JSON.stringify(getOwner("Harry Potter")));
+    console.log("");
+
+
+    // 9-Bonus) Create a function 'removeUser' that will remove a user from the database, along with his book (provided the user's name)
+    
+    function removeUser(name) {
+        for (var i = 0; i < database.users.length; i++) {
+            var user = database.users[i];
+            if (user.name === name) {
+                for (var j = 0; j < database.books.length; j++) {
+                    var book = database.books[j];
+                    if (book.ownerId === user.id) {
+
+                        database.users.splice(i, 1);
+                        database.books.splice(j, 1);
+
+                        return;
+                    }
+                }
+            }
+        }
+    };
+    removeUser("Gael");
+    console.log("Users after removal : " + database.users);
+    console.log("Books after removal : " + database.books);
+    console.log(database.users);
+    console.log(database.books);
+    console.log("Users after removal : " + JSON.stringify(database.users));
+    console.log("Users after removal : " + JSON.stringify(database.books));
+
+</script>
