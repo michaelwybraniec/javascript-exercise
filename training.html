@@ -634,6 +634,217 @@ Many different methods can be used to let JavaScript work with events:
 - You can prevent events from being sent or being handled
 - And more ...
 
+
+
+
+
+//////////////// Strings
+A JavaScript string is zero or more characters written inside quotes.
+
+*/
+    function stringExample(a, b, c) {
+        var a = "It's alright";
+        var b = "He is called 'Johnny'";
+        var c = 'He is called "Johnny"';
+        return a + b + c;
+    }
+    console.log(stringExample());
+    /*
+
+    The string will be chopped to "We are the so-called ".
+    The solution to avoid this problem, is to use the backslash escape character.
+    The backslash (\) escape character turns special characters into string characters:
+
+
+    Special Characters
+    Because strings must be written within quotes, JavaScript will misunderstand this string:
+
+    Code	Result	Description
+    \'	               '	    Single quote
+    \"           	"	       Double quote
+    \\	            \	       Backslash
+
+
+    */
+    function specialCharacters(a, b, c) {
+        var a = "It's \"alright\" ";
+        var b = "He is called \'Johnny\' ";
+        var c = "He is called \\Johnny\\ ";
+        return a + b + c;
+    }
+    console.log(specialCharacters());
+    /*
+    
+    
+Six other escape sequences are valid in JavaScript:
+Code	 Result
+\b	          Backspace
+\f	            Form Feed
+\n	           New Line
+\r	            Carriage Return
+\t	            Horizontal Tabulator
+\v	            Vertical Tabulator
+
+
+*/
+    function otherCharacters() {
+        var a = "It's alright!\n";
+        var b = "He is called Johnny \b\n !";
+        var c = "He is called Johnny \f !";
+        var d = "He is called Johnny \r\n";
+        var e = "He is called Johnny \t\n";
+        var f = "He is called Johnny \v\n";
+
+        return a + b + c + d + e + f;
+    }
+    console.log(otherCharacters());
+
+    //Finding a String in a String. 
+    //The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string:
+    // JavaScript counts positions from zero. 0 is the first position in a string, 1 is the second, 2 is the third ...
+    // Both indexOf(), and lastIndexOf() return -1 if the text is not found.
+
+    function locateIndexOfAString(str) {
+        var string = str;
+        var pos = str.indexOf("locate");
+        return pos;
+    }
+    console.log("What is the first occurrence  of 'locate' in a string? It is: " + JSON.stringify(locateIndexOfAString("Please locate where 'locate' occurs!")));
+
+
+
+    function locateIndexOfAString2(str) {
+        var string = str;
+        var pos = str.indexOf("where");
+        return pos;
+    }
+    console.log("first occurrence  of 'find' in a string? It is: " + JSON.stringify(locateIndexOfAString2("Please find where 'where' occurs!")));
+
+
+    // Searching for a String in a String
+    // The search() method searches a string for a specified value and returns the position of the match:
+    function SearchForStringInAString(str) {
+        var string = str;
+        var pos = str.search("where");
+        return pos;
+    }
+    console.log("SearchForStringInAString : " + JSON.stringify(SearchForStringInAString("Ok, now where is the word 'where' !")));
+
+
+
+    // Replace stirng content !!
+    function replaceStringContent(text) {
+        var str = text;
+        var txt = str.replace("Microsoft", "W3Schools");
+        return txt;
+    }
+    console.log("Replace stirng content! :" + JSON.stringify(replaceStringContent("Please visit Microsoft!")));
+
+
+
+    // Concatinate 
+    function concatinate(a, b) {
+        var text1 = a;
+        var text2 = b;
+        var text3 = a.concat(" ", b);
+        return text3
+    }
+    console.log("Concatinate text : " + JSON.stringify(concatinate("Hello", "World !")));
+
+    //String.trim()
+    // The trim() method removes whitespace from both sides of a string:
+    // + alert
+    function trimTheString(text) {
+        var str = text;
+        alert(str.trim());
+        return alert; // allert executed but result in console says 'undefined' can we add second return saying something like -  'alert executed' ?
+      
+    }
+    console.log("Alert trimming the string ! " + JSON.stringify(trimTheString("       Hello World!        ")));
+
+    // Converting a String to an Array
+    // A string can be converted to an array with the split() method:
+    function StringToArray(a) {
+        var str = a;
+        var arr = str.split(",");
+        return arr;
+    }
+    console.log("Converting a String to an Array : " + JSON.stringify(StringToArray("a,b,c,d,e,f")));
+
+    //If the separator is omitted, the returned array will contain the whole string in index [0].
+    // If the separator is "", the returned array will be an array of single characters:
+    function StringToArray2(a) {
+        var str = a;
+        var arr = str.split("");
+        var text = "";
+        var i;
+        for (i = 0; i < arr.length; i++) {
+            text += arr[i] + "/n"
+
+            // '\n' to add the break after each letter but string has been converted to an array so it logs an array.  What if I wanted to have such result: (?) I think it is not important, but in html would be <br> for break.
+            // H
+            // e
+            // l
+            // l
+            // o
+
+            return arr;
+        }
+    }
+    console.log("String \"Hello\" ToArray2 : " + JSON.stringify(StringToArray2("Hello")));
+
+    /*
+    
+    
+    
+    
+////////////////// Numbers
+
+Number Properties
+Property	                         Description
+MAX_VALUE	                    Returns the largest number possible in JavaScript
+MIN_VALUE	                     Returns the smallest number possible in JavaScript
+POSITIVE_INFINITY	       Represents infinity (returned on overflow)
+NEGATIVE_INFINITY	     Represents negative infinity (returned on overflow)
+NaN	                                     Represents a "Not-a-Number" value
+POSITIVE_INFINITY	       Represents infinity (returned on overflow)
+prototype	                         Allows you to add properties and methods to an object
+
+
+
+Number Methods
+Method	                           Description
+isFinite()	                          Checks whether a value is a finite number
+isInteger()	                        Checks whether a value is an integer
+isNaN()	                            Checks whether a value is Number.NaN
+isSafeInteger()	              Checks whether a value is a safe integer
+toExponential(x)	      Converts a number into an exponential notation
+toFixed(x)	                     Formats a number with x numbers of digits after the decimal point
+toPrecision(x)               Formats a number to x length
+toString()	                     Converts a number to a string
+valueOf()	                    Returns the primitive value of a number
+
+
+
+
+////////////////////// Arrays
+
+"Saab",
+            "Volvo",
+            "BMW"
+            
+JavaScript arrays are used to store multiple values in a single variable.
+*/
+    function myLovelyArray(array) {
+        var cars = array;
+        return cars;
+    }
+    console.log("myLovelyArray : " + JSON.stringify(["Saab","Volvo","BMW"]));
+
+    /*
+
+
+
      */
 
 </Script>
