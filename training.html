@@ -829,14 +829,14 @@ JavaScript arrays are used to store multiple values in a single variable.
         // 2. Loop trough the array
         for (var i = 0; i < fruitsarray3.length; i++) {
 // first iteration: 
-            // start at 0; is 0 smaller than the array.length? - yes.
+            // start at i = 0; is 0 smaller than the array.length? - yes.
             // first  element (at the index0) added to the var result string.
             // now - is index 'i' not equal to the array.length-1 ? yes i=0.
             // so then " ," is added to the result string.
             // Now result is "Banana, "
             // last step in  the first Incrementation (i = 1, because i = (0 = 0 + 1))
 // next iterration:
-            // i = 1, is 'i' smaller than the array.length? - yes.
+            // var i = 1, is 'i' smaller than the array.length? - yes.
             // second element (at the index1) added to the var result string.
             // is index 'i' not equal to the array.length-1 ? yes i=1.
             // then " ," is added to the result string.
@@ -848,18 +848,18 @@ JavaScript arrays are used to store multiple values in a single variable.
             // is index 'i' not equal to the array.length-1 ? no, now is i=3.
             // the 'if' condition was not met, so nothing is added
             // Now the result string = "Banana, Orange, Apple, Mango"
-            // Incrementation (i = 3, because i = (2 = 2 + 1))
-            // i = 4; is 4 smaller than the array.length? - no. iteration ends. 
+            // Incrementation (i = 4, because i = (3 = 3 + 1)
+            // Last one var i = 4; is 4 < array.length? - no. (length=4) so the incrementation stops, loop ends. 
             
             result += fruitsarray3[i]; // x = x + y (x = result, y = array at the index i) instuction to add results of the loop to the result string
             
-            if (i != fruitsarray3.length - 1) { // if i is not equal to 4-1: in this example because we want to add ", " to the string in between each iteration.
-                result += ", ";
+            if (i != fruitsarray3.length - 1) { // if 'i' is not equal to 4-1: in this example we want to add ", " to the string in between each iteration.
+                result += ", "; // existing string + ", "
             } // close if condition
         } // close the for loop
         return result; // return the result string
     }
-    console.log(loopTroughtTheArray4(["Banana", "Orange", "Apple", "Mango"]));
+    console.log(loopTroughtTheArray4(["Banana", "Orange", "Apple", "Mango"])); // [] brackets because we add array
     console.log(loopTroughtTheArray4(["a", "b", "c", "d", "e", "f" ]));
     
     
