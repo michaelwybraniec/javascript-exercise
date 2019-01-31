@@ -1,9 +1,9 @@
 <script>
-    // JS Home
-
     /*  
-          JS is the proggraming language of HTML and the Web
+    
+JS is the proggraming language of HTML and the Web
           /***JS is easy to learn.***
+          
           Example:
           
           Example display time:
@@ -20,18 +20,25 @@
     console.log(time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds());
 
     /*   
+    
 JavaScript Examples
-https://www.w3schools.com/js/js_examples.asp
+    https://www.w3schools.com/js/js_examples.asp
 
 JavaScript and HTML DOM Reference:
-https://www.w3schools.com/jsref/default.asp
+      https://www.w3schools.com/jsref/default.asp
 
 Why Study JavaScript?
-JavaScript is one of the 3 languages all web developers must learn:
+    JavaScript is one of the 3 languages all web developers must learn:
 
    1. HTML to define the content of web pages
    2. CSS to specify the layout of web pages
    3. JavaScript to program the behavior of web pages
+   
+   
+   
+   
+   
+   
    
    
    
@@ -138,7 +145,7 @@ How to insert a comment that has more than one line?
     //      <!--This comment has
     //    more than one line-->
     /*
-        Question 15:
+    Question 15:
     What is the correct way to write a JavaScript array?
 
       var colors = ["red", "green", "blue"]
@@ -208,9 +215,13 @@ How to insert a comment that has more than one line?
       No
         
         
+        
+        
+        
+        
       
       
-    JavaScript Arithmetic Operators
+JavaScript Arithmetic Operators
     Arithmetic operators are used to perform arithmetic on numbers:
 
     Operator	Description
@@ -241,7 +252,7 @@ How to insert a comment that has more than one line?
  |=	x                   |= y	              x = x | y 
  **=	                x **= y	           x = x ** y
 
-     JavaScript Comparison Operators
+JavaScript Comparison Operators
     Operator	Description
     ==	                equal to
     ===	               equal value and equal type
@@ -264,7 +275,12 @@ How to insert a comment that has more than one line?
         
         
         
-      JavaScript Data Types:
+        
+        
+        
+        
+        
+ JavaScript Data Types:
       The Concept of Data Types
        In programming, data types is an important concept.
        To be able to operate on variables, it is important to know something about the type.
@@ -287,7 +303,7 @@ How to insert a comment that has more than one line?
          x = 5;           // Now x is a Number
           x = "John";      // Now x is a String
           
-          Null
+Null
         In JavaScript null is "nothing". It is supposed to be something that doesn't exist.
           Unfortunately, in JavaScript, the data type of null is an object.
             You can consider it a bug in JavaScript that typeof null is an object. It should be null.
@@ -304,6 +320,320 @@ How to insert a comment that has more than one line?
 
               null === undefined         // false
               null == undefined          // true
-    */
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+////////////////////////Functions
+
+A JavaScript function is a block of code designed to perform a particular task.
+A JavaScript function is executed when "something" invokes it (calls it).
+Example:
+This example calls a function which performs a calculation, and returns the result:
+
+*/
+    function myFunction(a, b) {
+        return a * b;
+    }
+    console.log(myFunction(1, 2))
+    /*
+       
+//JavaScript Function Syntax
+        A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().
+        Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).
+        The parentheses may include parameter names separated by commas: (parameter1, parameter2, ...)
+        The code to be executed, by the function, is placed inside curly brackets: {}
+       
+       Ex: 
+        function name(parameter1, parameter2, parameter3) {
+       // code to be executed
+       }
+       
+       Function parameters are listed inside the parentheses () in the function definition.
+        Function arguments are the values received by the function when it is invoked.
+        Inside the function, the arguments (the parameters) behave as local variables.
+        A Function is much the same as a Procedure or a Subroutine, in other programming languages.
+       
+       Function Invocation
+        The code inside the function will execute when "something" invokes (calls) the function:
+        When an event occurs (when a user clicks a button)
+       When it is invoked (called) from JavaScript code
+       Automatically (self invoked)
+       
+       
+ //Function Return
+       When JavaScript reaches a return statement, the function will stop executing.
+       If the function was invoked from a statement, JavaScript will "return" to execute the code after the invoking statement.
+       Functions often compute a return value. The return value is "returned" back to the "caller":
+       
+       Ex: This example calls a function which performs a calculation and returns the result:
+       
+       <h2>JavaScript Functions</h2>
+       <p>This example calls a function which performs a calculation and returns the result:</p>
+        <p id="demo"></p>
+      <script>
+        var x = myFunction(4, 3);
+        document.getElementById("demo").innerHTML = x;
+function myFunction(a, b) {
+  return a * b;
+}
+       */
+    function myFunction(a, b) {
+        var x = a;
+        var y = b;
+        return x * y;
+        // or as previously:     return a * b;
+    }
+    console.log(myFunction(4, 3));
+
+    /*
+   Why Functions?
+    - You can reuse code: Define the code once, and use it many times.
+    -  You can use the same code many times with different arguments, to produce different results.
+   
+    Example
+    Convert Fahrenheit to Celsius:
+*/
+    function toCelsius(fahrenheit) {
+        return (5 / 9) * (fahrenheit - 32);
+    }
+    console.log(toCelsius(77));
+    /* 
+      The () Operator Invokes the Function
+       - Using the example above, toCelsius refers to the function object, and toCelsius() refers to the function result.
+         - Accessing a function without () will return the function definition instead of the function result:
+        
+        HTML:
+         function toCelsius(f) {
+          return (5/9) * (f-32);
+          }
+          document.getElementById("demo").innerHTML = toCelsius;
+         
+         
+         console.log adopted:
+         */
+    function toCelsius2(f) {
+        return (5 / 9) * (f - 32);
+    }
+    console.log(toCelsius2);
+
+    /*
+    Functions Used as Variable Values
+    Functions can be used the same way as you use variables, in all types of formulas, assignments, and calculations.
+
+    Example
+    Instead of using a variable to store the return value of a function:
+
+    var x = toCelsius(77);
+    var text = "The temperature is " + x + " Celsius";
+    You can use the function directly, as a variable value:
+
+    var text = "The temperature is " + toCelsius(77) + " Celsius";
+         
+         
+        HTML (oryginal)
+        document.getElementById("demo").innerHTML =
+"The temperature is " + toCelsius(77) + " Celsius";
+
+function toCelsius(fahrenheit) {
+  return (5/9) * (fahrenheit-32);
+} 
+
+
+     console.log adopted:
+         */
+    function toCelsius3(fahrenheit) {
+        return (5 / 9) * (fahrenheit - 32);
+    }
+    console.log("The temperature is " + JSON.stringify(toCelsius3(77)) + " Celsius")
+    /*
+    
+    QUIZ: 
+
+    Not clear:
+    
+    Use escape characters to alert We are "Vikings".
+    var txt = "We are \"Vikings\"";      // why sign '\' isnt after the 3rd ".
+    alert(txt);
+    
+    Find the position of the character h in the string txt.     // is this HTML or JS?
+    var txt = "abcdefghijklm";
+    var pos = txt.indexOf("h");
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+/////////////////////////////////// Objects:
+
+    Real Life Objects, Properties, and Methods
+     In real life, a car is an object.
+     A car has properties like weight and color, and methods like start and stop:
+     
+     Properties:
+     car.name = Fiat
+     car.model = 500
+      car.weight = 850kg
+      car.color = white
+      
+      Methods:
+      car.start()
+      car.drive()
+      car.brake() 
+     car.stop()
+ 
+    All cars have the same properties, but the property values differ from car to car.
+    All cars have the same methods, but the methods are performed at different times.
+    
+    This code assigns a simple value (Fiat) to a variable named car:
+     var car = "Fiat";
+     
+    Objects are variables too. But objects can contain many values.
+    This code assigns many values (Fiat, 500, white) to a variable named car:
+    
+    var car = {type:"Fiat", model:"500", color:"white"};
+    
+    The values are written as name:value pairs (name and value separated by a colon).
+    JavaScript objects are containers for named values called properties or methods.
+    
+Object Definition
+    You define (and create) a JavaScript object with an object literal:
+    Example
+    var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+    
+    Spaces and line breaks are not important. An object definition can span multiple lines:
+    Example
+     var person = {
+      firstName: "John",
+      lastName: "Doe",
+      age: 50,
+     eyeColor: "blue" 
+     };
+     
+Accessing Object Properties
+     You can access object properties in two ways:
+     
+     objectName.propertyName
+     
+     or
+
+      objectName["propertyName"]
+
+
+Object Methods
+     Objects can also have methods.
+     Methods are actions that can be performed on objects.
+     Methods are stored in properties as function definitions.
+     
+     Example
+     var person = {
+     firstName: "John",
+     lastName : "Doe",
+     id       : 5566,
+     fullName : function() {return this.firstName + " " + this.lastName;}
+     };
+     
+The - this - Keyword
+     In a function definition, this refers to the "owner" of the function.
+     In the example above, this is the person object that "owns" the fullName function.
+     In other words, this.firstName means the firstName property of this object.
+     
+     
+
+The JavaScript this Keyword 
+     https://www.w3schools.com/js/js_this.asp
+     
+     
+     
+  
+Do Not Declare Strings, Numbers, and Booleans as Objects!
+
+When a JavaScript variable is declared with the keyword "new", the variable is created as an object:
+
+var x = new String();        // Declares x as a String object
+var y = new Number();        // Declares y as a Number object
+var z = new Boolean();       // Declares z as a Boolean object
+
+Avoid String, Number, and Boolean objects. They complicate your code and slow down execution speed.
+     
+     
+     
+     
+     
+     
+
+///////////////////// EVENTS
+
+HTML events are "things" that happen to HTML elements.
+When JavaScript is used in HTML pages, JavaScript can "react" on these events.
+
+HTML Events
+An HTML event can be something the browser does, or something a user does.
+Here are some examples of HTML events:
+
+An HTML web page has finished loading
+An HTML input field was changed
+An HTML button was clicked
+Often, when events happen, you may want to do something.
+
+JavaScript lets you execute code when events are detected.
+HTML allows event handler attributes, with JavaScript code, to be added to HTML elements.
+
+With single quotes:
+<element event='some JavaScript'>
+
+With double quotes:
+<element event="some JavaScript">
+     
+In the following example, an onclick attribute (with code), is added to a <button> element:
+Example:   <button onclick="document.getElementById('demo').innerHTML = Date()">The time is?</button>
+     
+    
+// Common HTML Events
+Here is a list of some common HTML events:
+
+Event	                    Description
+onchange	          An HTML element has been changed
+onclick	                   The user clicks an HTML element
+onmouseover	     The user moves the mouse over an HTML element
+onmouseout     	  The user moves the mouse away from an HTML element
+onkeydown	       The user pushes a keyboard key
+onload	                  The browser has finished loading the page
+
+The list is much longer: 
+https://www.w3schools.com/jsref/dom_obj_event.asp
+
+
+
+What can JavaScript Do?
+Event handlers can be used to handle, and verify, user input, user actions, and browser actions:
+
+- Things that should be done every time a page loads
+- Things that should be done when the page is closed
+- Action that should be performed when a user clicks a button
+- Content that should be verified when a user inputs data
+- And more ...
+
+Many different methods can be used to let JavaScript work with events:
+
+- HTML event attributes can execute JavaScript code directly
+- HTML event attributes can call JavaScript functions
+- You can assign your own event handler functions to HTML elements
+- You can prevent events from being sent or being handled
+- And more ...
+
+     */
 
 </Script>
