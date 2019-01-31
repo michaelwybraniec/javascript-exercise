@@ -1,6 +1,23 @@
 <script>
     /*  
     
+Good habits for testing :
+   - Using lots of use-cases
+   - Logging everywhere
+   - Removing parts of code and see what happens
+   
+   0659042144
+   https://www.w3schools.com/js/default.asp
+   1) Test a lot what you do
+   2) Don't make shit up
+   Things are simple - if they don't work, call me
+   
+   
+   
+   
+   
+   
+    
 JS is the proggraming language of HTML and the Web
           /***JS is easy to learn.***
           
@@ -14,22 +31,17 @@ JS is the proggraming language of HTML and the Web
           <p id="demo"></p>
         
         */
-
     // JS script seperated - display time.
     var time = new Date();
     console.log(time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds());
-
     /*   
     
 JavaScript Examples
     https://www.w3schools.com/js/js_examples.asp
-
 JavaScript and HTML DOM Reference:
       https://www.w3schools.com/jsref/default.asp
-
 Why Study JavaScript?
     JavaScript is one of the 3 languages all web developers must learn:
-
    1. HTML to define the content of web pages
    2. CSS to specify the layout of web pages
    3. JavaScript to program the behavior of web pages
@@ -44,100 +56,82 @@ Why Study JavaScript?
    
 Quick test:
 https://www.w3schools.com/quiztest/default.asp
-
 My Result: 18 of 25 (72%)
 Comment returned: Almost! Study a little more and take the test again!
 Time Spent - 5:24
-
-
 Question 1:
 Inside which HTML element do we put the JavaScript?
-
   <scripting>
   <javascript>
   <js>
   <script>
 Question 2:
 What is the correct JavaScript syntax to change the content of the HTML element below?
-
 <p id="demo">This is a demonstration.</p>
-
   document.getElementById("demo").innerHTML = "Hello World!";
   #demo.innerHTML = "Hello World!";
   document.getElement("p").innerHTML = "Hello World!";
   document.getElementByName("p").innerHTML = "Hello World!";
 Question 3:
 Where is the correct place to insert a JavaScript?
-
   Both the <head> section and the <body> section are correct
   The <body> section
   The <head> section
 Question 4:
 What is the correct syntax for referring to an external script called "xxx.js"?
-
   <script src="xxx.js">
   <script href="xxx.js">
   <script name="xxx.js">
 Question 5:
 The external JavaScript file must contain the <script> tag.
-
   True
   False
 Question 6:
 How do you write "Hello World" in an alert box?
-
   alertBox("Hello World");
   msg("Hello World");
   msgBox("Hello World");
   alert("Hello World");
 Question 7:
 How do you create a function in JavaScript?
-
   function myFunction()
   function:myFunction()
   function = myFunction()
 Question 8:
 How do you call a function named "myFunction"?
-
   myFunction()
   call function myFunction()
   call myFunction()
 Question 9:
 How to write an IF statement in JavaScript?
-
   if (i == 5)
   if i == 5 then
   if i = 5
   if i = 5 then
 Question 10:
 How to write an IF statement for executing some code if "i" is NOT equal to 5?
-
   if (i != 5)
   if (i <> 5)
   if i =! 5 then
   if i <> 5
 Question 11:
 How does a WHILE loop start?
-
   while (i <= 10; i++)
   while (i <= 10)
   while i = 1 to 10
 Question 12:
 How does a FOR loop start?
-
   for (i = 0; i <= 5; i++)
   for (i <= 5; i++)
   for i = 1 to 5
   for (i = 0; i <= 5)
 Question 13:
 How can you add a comment in a JavaScript?
-
   //This is a comment
   'This is a comment
   <!--This is a comment-->
 Question 14:
 How to insert a comment that has more than one line?
-
      /*This comment has
      more than one line*/
     //This comment has
@@ -147,70 +141,59 @@ How to insert a comment that has more than one line?
     /*
     Question 15:
     What is the correct way to write a JavaScript array?
-
       var colors = ["red", "green", "blue"]
       var colors = 1 = ("red"), 2 = ("green"), 3 = ("blue")
       var colors = (1:"red", 2:"green", 3:"blue")
       var colors = "red", "green", "blue"
     Question 16:
     How do you round the number 7.25, to the nearest integer?
-
       Math.round(7.25)
       rnd(7.25)
       Math.rnd(7.25)
       round(7.25)
     Question 17:
     How do you find the number with the highest value of x and y?
-
       Math.max(x, y)
       ceil(x, y)
       Math.ceil(x, y)
       top(x, y)
     Question 18:
     What is the correct JavaScript syntax for opening a new window called "w2" ?
-
       w2 = window.new("http://www.w3schools.com");
       w2 = window.open("http://www.w3schools.com");
     Question 19:
     JavaScript is the same as Java.
-
       False
       True
     Question 20:
     How can you detect the client's browser name?
-
       browser.name
       client.navName
       navigator.appName
     Question 21:
     Which event occurs when the user clicks on an HTML element?
-
       onclick
       onchange
       onmouseover
       onmouseclick
     Question 22:
     How do you declare a JavaScript variable?
-
       var carName;
       v carName;
       variable carName;
     Question 23:
     Which operator is used to assign a value to a variable?
-
       =
       -
       *
       x
     Question 24:
     What will the following code return: Boolean(10 > 9)
-
       NaN
       false
       true
     Question 25:
     Is JavaScript case-sensitive?
-
       Yes
       No
         
@@ -223,7 +206,6 @@ How to insert a comment that has more than one line?
       
 JavaScript Arithmetic Operators
     Arithmetic operators are used to perform arithmetic on numbers:
-
     Operator	Description
     +	                 Addition
     -	                  Subtraction
@@ -236,7 +218,6 @@ JavaScript Arithmetic Operators
       
    JavaScript Assignment Operators
    Assignment operators assign values to JavaScript variables.
-
    Operator	     Example	  Same As
    =	                  x = y	              x = y
   +=	                 x += y	           x = x + y
@@ -251,7 +232,6 @@ JavaScript Arithmetic Operators
  ^=	x                  ^= y	               x = x ^ y
  |=	x                   |= y	              x = x | y 
  **=	                x **= y	           x = x ** y
-
 JavaScript Comparison Operators
     Operator	Description
     ==	                equal to
@@ -284,13 +264,10 @@ JavaScript Comparison Operators
       The Concept of Data Types
        In programming, data types is an important concept.
        To be able to operate on variables, it is important to know something about the type.
-
         Without data types, a computer cannot safely solve this:
-
         var x = 16 + "Volvo";
         
         JavaScript evaluates expressions from left to right. Different sequences can produce different results:
-
         JavaScript:
           var x = 16 + 4 + "Volvo";
           Result: 20Volvo
@@ -314,10 +291,8 @@ Null
             
             Difference Between Undefined and Null
              undefined and null are equal in value but different in type:
-
              typeof undefined           // undefined
              typeof null                // object
-
               null === undefined         // false
               null == undefined          // true
               
@@ -331,12 +306,10 @@ Null
               
               
 ////////////////////////Functions
-
 A JavaScript function is a block of code designed to perform a particular task.
 A JavaScript function is executed when "something" invokes it (calls it).
 Example:
 This example calls a function which performs a calculation, and returns the result:
-
 */
     function myFunction(a, b) {
         return a * b;
@@ -391,7 +364,6 @@ function myFunction(a, b) {
         // or as previously:     return a * b;
     }
     console.log(myFunction(4, 3));
-
     /*
    Why Functions?
     - You can reuse code: Define the code once, and use it many times.
@@ -422,30 +394,23 @@ function myFunction(a, b) {
         return (5 / 9) * (f - 32);
     }
     console.log(toCelsius2);
-
     /*
     Functions Used as Variable Values
     Functions can be used the same way as you use variables, in all types of formulas, assignments, and calculations.
-
     Example
     Instead of using a variable to store the return value of a function:
-
     var x = toCelsius(77);
     var text = "The temperature is " + x + " Celsius";
     You can use the function directly, as a variable value:
-
     var text = "The temperature is " + toCelsius(77) + " Celsius";
          
          
         HTML (oryginal)
         document.getElementById("demo").innerHTML =
 "The temperature is " + toCelsius(77) + " Celsius";
-
 function toCelsius(fahrenheit) {
   return (5/9) * (fahrenheit-32);
 } 
-
-
      console.log adopted:
          */
     function toCelsius3(fahrenheit) {
@@ -455,7 +420,6 @@ function toCelsius(fahrenheit) {
     /*
     
     QUIZ: 
-
     Not clear:
     
     Use escape characters to alert We are "Vikings".
@@ -477,7 +441,6 @@ function toCelsius(fahrenheit) {
     
     
 /////////////////////////////////// Objects:
-
     Real Life Objects, Properties, and Methods
      In real life, a car is an object.
      A car has properties like weight and color, and methods like start and stop:
@@ -528,10 +491,7 @@ Accessing Object Properties
      objectName.propertyName
      
      or
-
       objectName["propertyName"]
-
-
 Object Methods
      Objects can also have methods.
      Methods are actions that can be performed on objects.
@@ -551,7 +511,6 @@ The - this - Keyword
      In other words, this.firstName means the firstName property of this object.
      
      
-
 The JavaScript this Keyword 
      https://www.w3schools.com/js/js_this.asp
      
@@ -559,41 +518,30 @@ The JavaScript this Keyword
      
   
 Do Not Declare Strings, Numbers, and Booleans as Objects!
-
 When a JavaScript variable is declared with the keyword "new", the variable is created as an object:
-
 var x = new String();        // Declares x as a String object
 var y = new Number();        // Declares y as a Number object
 var z = new Boolean();       // Declares z as a Boolean object
-
 Avoid String, Number, and Boolean objects. They complicate your code and slow down execution speed.
      
      
      
+  
      
-     
-     
-
 ///////////////////// EVENTS
-
 HTML events are "things" that happen to HTML elements.
 When JavaScript is used in HTML pages, JavaScript can "react" on these events.
-
 HTML Events
 An HTML event can be something the browser does, or something a user does.
 Here are some examples of HTML events:
-
 An HTML web page has finished loading
 An HTML input field was changed
 An HTML button was clicked
 Often, when events happen, you may want to do something.
-
 JavaScript lets you execute code when events are detected.
 HTML allows event handler attributes, with JavaScript code, to be added to HTML elements.
-
 With single quotes:
 <element event='some JavaScript'>
-
 With double quotes:
 <element event="some JavaScript">
      
@@ -603,7 +551,6 @@ Example:   <button onclick="document.getElementById('demo').innerHTML = Date()">
     
 // Common HTML Events
 Here is a list of some common HTML events:
-
 Event	                    Description
 onchange	          An HTML element has been changed
 onclick	                   The user clicks an HTML element
@@ -611,23 +558,16 @@ onmouseover	     The user moves the mouse over an HTML element
 onmouseout     	  The user moves the mouse away from an HTML element
 onkeydown	       The user pushes a keyboard key
 onload	                  The browser has finished loading the page
-
 The list is much longer: 
 https://www.w3schools.com/jsref/dom_obj_event.asp
-
-
-
 What can JavaScript Do?
 Event handlers can be used to handle, and verify, user input, user actions, and browser actions:
-
 - Things that should be done every time a page loads
 - Things that should be done when the page is closed
 - Action that should be performed when a user clicks a button
 - Content that should be verified when a user inputs data
 - And more ...
-
 Many different methods can be used to let JavaScript work with events:
-
 - HTML event attributes can execute JavaScript code directly
 - HTML event attributes can call JavaScript functions
 - You can assign your own event handler functions to HTML elements
@@ -635,12 +575,8 @@ Many different methods can be used to let JavaScript work with events:
 - And more ...
 
 
-
-
-
 //////////////// Strings
 A JavaScript string is zero or more characters written inside quotes.
-
 */
     function stringExample(a, b, c) {
         var a = "It's alright";
@@ -650,21 +586,15 @@ A JavaScript string is zero or more characters written inside quotes.
     }
     console.log(stringExample());
     /*
-
     The string will be chopped to "We are the so-called ".
     The solution to avoid this problem, is to use the backslash escape character.
     The backslash (\) escape character turns special characters into string characters:
-
-
     Special Characters
     Because strings must be written within quotes, JavaScript will misunderstand this string:
-
     Code	Result	Description
     \'	               '	    Single quote
     \"           	"	       Double quote
     \\	            \	       Backslash
-
-
     */
     function specialCharacters(a, b, c) {
         var a = "It's \"alright\" ";
@@ -684,8 +614,6 @@ Code	 Result
 \r	            Carriage Return
 \t	            Horizontal Tabulator
 \v	            Vertical Tabulator
-
-
 */
     function otherCharacters() {
         var a = "It's alright!\n";
@@ -694,16 +622,13 @@ Code	 Result
         var d = "He is called Johnny \r\n";
         var e = "He is called Johnny \t\n";
         var f = "He is called Johnny \v\n";
-
         return a + b + c + d + e + f;
     }
     console.log(otherCharacters());
-
     //Finding a String in a String. 
     //The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string:
     // JavaScript counts positions from zero. 0 is the first position in a string, 1 is the second, 2 is the third ...
     // Both indexOf(), and lastIndexOf() return -1 if the text is not found.
-
     function locateIndexOfAString(str) {
         var string = str;
         var pos = str.indexOf("locate");
@@ -711,16 +636,12 @@ Code	 Result
     }
     console.log("What is the first occurrence  of 'locate' in a string? It is: " + JSON.stringify(locateIndexOfAString("Please locate where 'locate' occurs!")));
 
-
-
     function locateIndexOfAString2(str) {
         var string = str;
         var pos = str.indexOf("where");
         return pos;
     }
     console.log("first occurrence  of 'find' in a string? It is: " + JSON.stringify(locateIndexOfAString2("Please find where 'where' occurs!")));
-
-
     // Searching for a String in a String
     // The search() method searches a string for a specified value and returns the position of the match:
     function SearchForStringInAString(str) {
@@ -729,9 +650,6 @@ Code	 Result
         return pos;
     }
     console.log("SearchForStringInAString : " + JSON.stringify(SearchForStringInAString("Ok, now where is the word 'where' !")));
-
-
-
     // Replace stirng content !!
     function replaceStringContent(text) {
         var str = text;
@@ -739,9 +657,6 @@ Code	 Result
         return txt;
     }
     console.log("Replace stirng content! :" + JSON.stringify(replaceStringContent("Please visit Microsoft!")));
-
-
-
     // Concatinate 
     function concatinate(a, b) {
         var text1 = a;
@@ -750,7 +665,6 @@ Code	 Result
         return text3
     }
     console.log("Concatinate text : " + JSON.stringify(concatinate("Hello", "World !")));
-
     //String.trim()
     // The trim() method removes whitespace from both sides of a string:
     // + alert
@@ -758,10 +672,9 @@ Code	 Result
         var str = text;
         alert(str.trim());
         return alert; // allert executed but result in console says 'undefined' can we add second return saying something like -  'alert executed' ?
-      
+
     }
     console.log("Alert trimming the string ! " + JSON.stringify(trimTheString("       Hello World!        ")));
-
     // Converting a String to an Array
     // A string can be converted to an array with the split() method:
     function StringToArray(a) {
@@ -770,7 +683,6 @@ Code	 Result
         return arr;
     }
     console.log("Converting a String to an Array : " + JSON.stringify(StringToArray("a,b,c,d,e,f")));
-
     //If the separator is omitted, the returned array will contain the whole string in index [0].
     // If the separator is "", the returned array will be an array of single characters:
     function StringToArray2(a) {
@@ -780,19 +692,16 @@ Code	 Result
         var i;
         for (i = 0; i < arr.length; i++) {
             text += arr[i] + "/n"
-
             // '\n' to add the break after each letter but string has been converted to an array so it logs an array.  What if I wanted to have such result: (?) I think it is not important, but in html would be <br> for break.
             // H
             // e
             // l
             // l
             // o
-
             return arr;
         }
     }
     console.log("String \"Hello\" ToArray2 : " + JSON.stringify(StringToArray2("Hello")));
-
     /*
     
     
@@ -801,50 +710,163 @@ Code	 Result
 ////////////////// Numbers
 
 Number Properties
-Property	                         Description
-MAX_VALUE	                    Returns the largest number possible in JavaScript
-MIN_VALUE	                     Returns the smallest number possible in JavaScript
-POSITIVE_INFINITY	       Represents infinity (returned on overflow)
-NEGATIVE_INFINITY	     Represents negative infinity (returned on overflow)
-NaN	                                     Represents a "Not-a-Number" value
-POSITIVE_INFINITY	       Represents infinity (returned on overflow)
-prototype	                         Allows you to add properties and methods to an object
-
-
+Property	                  Description
+MAX_VALUE	                  Returns the largest number possible in JavaScript
+MIN_VALUE	                  Returns the smallest number possible in JavaScript
+POSITIVE_INFINITY	          Represents infinity (returned on overflow)
+NEGATIVE_INFINITY	          Represents negative infinity (returned on overflow)
+NaN	                          Represents a "Not-a-Number" value
+POSITIVE_INFINITY	          Represents infinity (returned on overflow)
+prototype	                  Allows you to add properties and methods to an object
 
 Number Methods
-Method	                           Description
-isFinite()	                          Checks whether a value is a finite number
-isInteger()	                        Checks whether a value is an integer
-isNaN()	                            Checks whether a value is Number.NaN
+Method	                      Description
+isFinite()	                  Checks whether a value is a finite number
+isInteger()	                  Checks whether a value is an integer
+isNaN()	                      Checks whether a value is Number.NaN
 isSafeInteger()	              Checks whether a value is a safe integer
-toExponential(x)	      Converts a number into an exponential notation
-toFixed(x)	                     Formats a number with x numbers of digits after the decimal point
-toPrecision(x)               Formats a number to x length
-toString()	                     Converts a number to a string
-valueOf()	                    Returns the primitive value of a number
+toExponential(x)	          Converts a number into an exponential notation
+toFixed(x)	                  Formats a number with x numbers of digits after the decimal point
+toPrecision(x)                Formats a number to x length
+toString()	                  Converts a number to a string
+valueOf()	                  Returns the primitive value of a number
 
 
 
 
-////////////////////// Arrays
-
-"Saab",
-            "Volvo",
-            "BMW"
-            
+////////////////////// Arrays         
 JavaScript arrays are used to store multiple values in a single variable.
 */
     function myLovelyArray(array) {
         var cars = array;
         return cars;
     }
-    console.log("myLovelyArray : " + JSON.stringify(["Saab","Volvo","BMW"]));
+    console.log("myLovelyArray : " + JSON.stringify(["Saab", "Volvo", "BMW"]));
 
-    /*
+    // Changing an Array Element at the position 0
+    //This statement changes the value of the first element in cars:
+    function changeElementsinTheArray(element) {
+        var cars = ["Saab", "Volvo", "BMW"];
+        cars[0] = element;
+        return cars;
+    }
+    console.log(changeElementsinTheArray("Opel"));
+
+    // Changing an any Array element at any position of any element array
+    function changeElementsinTheArray2(element, position, allelements) {
+        var cars = allelements;
+        cars[position] = element;
+        return cars;
+    }
+    console.log(changeElementsinTheArray2("Opel", 0, ["Saab", "Volvo", "BMW"]));
+
+    // Reduced variable
+    function changeElementsinTheArray3(element, index, allelements) {
+        allelements[index] = element;
+        return allelements;
+    }
+    console.log(changeElementsinTheArray3("Ferrari", 0, ["Saab", "Fiat", "BMW"]));
+
+    
+    
+    
+    // Solution from the exercise (with some HTML) = Loop trough the array
+    function loopTroughtTheArray() {
+
+        var fruits, text, fLen, i;
+        fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fLen = fruits.length;
+
+        text = "<ul>";
+        for (i = 0; i < fLen; i++) {
+            text += "<li>" + fruits[i] + "</li>";
+        }
+
+        text += "</ul>";
+        return text;
+
+    }
+    console.log(loopTroughtTheArray());
+    // result: <ul><li>Banana</li><li>Orange</li><li>Apple</li><li>Mango</li></ul>
+
+    
+    
+
+    // Loop trough the array (HTML adopted) - dynamic input
+    function loopTroughtTheArray2(fruitsarray) {
+        var result = ["<ul>"];
+        for (var i = 0; i < fruitsarray.length; i++) {
+            result += "<li>" + fruitsarray[i] + "</li>";
+        }
+        result += "</ul>";
+        return result;
+    }
+    console.log(loopTroughtTheArray2(["Banana", "Orange", "Apple", "Mango"]));
+    console.log(loopTroughtTheArray2(["a", "b", "c", "d", "e", "f" ]));
 
 
+    
+    
+    // Loop trough the array (console.log) - dynamic input 
+    function loopTroughtTheArray3(fruitsarray2) {
+        var result = ""; // it changes array to string dynamically - is it correct solution? (types casting)
+        for (var i = 0; i < fruitsarray2.length; i++) {
+            result += fruitsarray2;
+            return result;
+        }
+    }
+    console.log(loopTroughtTheArray3(["Banana", "Orange", "Apple", "Mango"]));
+     console.log(loopTroughtTheArray3(["a", "b", "c", "d", "e", "f" ]));
 
-     */
+    
+    
+    
+        // Solution 3: Loop trough the array - dynamic input (by fruitsarray3)
+    function loopTroughtTheArray4(fruitsarray3) {
+        // 1. Declaring string
+        var result = ""; 
+        
+        // 2. Loop trough the array
+        for (var i = 0; i < fruitsarray3.length; i++) {
+// first iteration: 
+            // start at 0; is 0 smaller than the array.length? - yes.
+            // first  element (at the index0) added to the var result string.
+            // now - is index 'i' not equal to the array.length-1 ? yes i=0.
+            // so then " ," is added to the result string.
+            // Now result is "Banana, "
+            // last step in  the first Incrementation (i = 1, because i = (0 = 0 + 1))
+// next iterration:
+            // i = 1, is 'i' smaller than the array.length? - yes.
+            // second element (at the index1) added to the var result string.
+            // is index 'i' not equal to the array.length-1 ? yes i=1.
+            // then " ," is added to the result string.
+            // and so on..
+            
+// last iteration:  
+            // i = 3; is 3 smaller than the array.length? - yes. (array length = 4)
+            // last array element (at the index3) added to the var result string.
+            // is index 'i' not equal to the array.length-1 ? no, now is i=3.
+            // the 'if' condition was not met, so nothing is added
+            // Now the result string = "Banana, Orange, Apple, Mango"
+            // Incrementation (i = 3, because i = (2 = 2 + 1))
+            // i = 4; is 4 smaller than the array.length? - no. iteration ends. 
+            
+            result += fruitsarray3[i]; // x = x + y (x = result, y = array at the index i) instuction to add results of the loop to the result string
+            
+            if (i != fruitsarray3.length - 1) { // if i is not equal to 4-1: in this example because we want to add ", " to the string in between each iteration.
+                result += ", ";
+            } // close if condition
+        } // close the for loop
+        return result; // return the result string
+    }
+    console.log(loopTroughtTheArray4(["Banana", "Orange", "Apple", "Mango"]));
+    console.log(loopTroughtTheArray4(["a", "b", "c", "d", "e", "f" ]));
+    
+    
+   
+    
+</script>
 
-</Script>
+
+/*
+*/
