@@ -863,6 +863,9 @@ JavaScript arrays are used to store multiple values in a single variable.
 
 
 
+    
+    
+
 
     ////// Associative Arrays
     // Many programming languages support arrays with named indexes.
@@ -893,7 +896,6 @@ JavaScript arrays are used to store multiple values in a single variable.
 
 
 
-
     // When to Use Arrays   ???
     // When to use Objects  ???
     //   - JavaScript does not support associative arrays.
@@ -912,8 +914,6 @@ JavaScript arrays are used to store multiple values in a single variable.
     //      Solution 1 - To solve this problem ECMAScript 5 defines a new method Array.isArray():
     //          Array.isArray(fruits);   // returns true
 
-
-
     //Converting Arrays to Strings
     //The JavaScript method toString() converts an array to a string of (comma separated) array values.
     function ArraysToStrings(VararrayToString) {
@@ -928,7 +928,7 @@ JavaScript arrays are used to store multiple values in a single variable.
     //The join() method also joins all array elements into a string.
     // It behaves just like toString(), but in addition you can specify the separator:
     function joinMethod(myarrayJoin) {
-        var result = myarrayJoin.join(" </br> ");
+        var result = myarrayJoin.join(" <br> ");
         return result;
     }
     console.log("The join() method : " + JSON.stringify(joinMethod(["Yellow", "Orange", "Gray", "Black"])));
@@ -936,6 +936,11 @@ JavaScript arrays are used to store multiple values in a single variable.
 
 
 
+    
+    
+    
+    
+    
     // Popping and Pushing
     // When you work with arrays, it is easy to remove elements and add new elements.
     // This is what popping and pushing is:
@@ -958,21 +963,172 @@ JavaScript arrays are used to store multiple values in a single variable.
     console.log("The pop()ed element : " + JSON.stringify(ThePop2(["C", "O", "O", "L", "!"])));
 
 
-
     // Splicing an Array 
     //The splice() method can be used to add new items to an array:
 
     // Exmple
     // var fruits = ["Banana", "Orange", "Apple", "Mango"];
     // fruits.splice(2, 0, "Lemon", "Kiwi");
-    
+
     // dynamic situation: (Tried to adopt it but it add string or the object as it only adds ad the ^place of the index of the array to add..) Therefore, result is Array (3) ["OUOUI", "Tom,Jerry", "GABI"]
-    function spliceMyArray(indexAdd, indexRemove, existingArray, elementsToAdd){
+    function spliceMyArray(indexAdd, indexRemove, existingArray, elementsToAdd) {
         existingArray.splice(indexAdd, indexRemove, elementsToAdd.toString());
         return existingArray;
     }
-   console.log(spliceMyArray(1,2,["OUOUI", "MIKE", "BUBU", "GABI"],["Tom", "Jerry"]));
-  console.log(spliceMyArray(1,2,["a", "b", "c", "d", "e"],["xx", "zz"]));
+    console.log(spliceMyArray(1, 2, ["OUOUI", "MIKE", "BUBU", "GABI"], ["Tom", "Jerry"]));
+    console.log(spliceMyArray(1, 2, ["a", "b", "c", "d", "e"], ["xx", "zz"]));
+
+
+
+
+
+
+
+
+
+    ///////////////////// Array Iteration Methods
+    //
+    //   Array.forEach()
+    //   Method calls a function (a callback function) once for each array element.
+    //
+    //   var txt = "";
+    //   var numbers = [45, 4, 9, 16, 25];
+    //   numbers.forEach(myFunction);
+    //
+    //   function myFunction(value, index, array) {
+    //     txt = txt + value + "<br>"; 
+    //   }
+    //
+
+    // console.log adopted
+    function ArrayForEach() {
+        var txt = "";
+        var numbers = [45, 4, 9, 16, 25];
+        numbers.forEach(myFunction);
+
+        function myFunction(value, index, array) {
+            txt = txt + value + " <br> ";
+        }
+        return txt;
+    }
+    console.log("Array ForEach : " + JSON.stringify(ArrayForEach()));
+
+
+    // dynamic input
+    function ArrayForEach2(numbers, separator) {
+        var result = "";
+        numbers.forEach(myFunction);
+
+        function myFunction(value) {
+            result += value + separator;
+        }
+        return result;
+    }
+    console.log("Array forEach() : " + JSON.stringify(ArrayForEach2([45, 4, 9, 16, 25], " <br> ")));
+    console.log("Array forEach() : " + JSON.stringify(ArrayForEach2(["Txt1", "Txt2", "Txt3", 12, true], " <br> ")));
+
+    
+    
+    
+    
+    
+
+    ////////// Array.map()
+    //
+    //  The map() method creates a new array by performing a function on each array element.
+    //  The map() method does not execute the function for array elements without values.
+    //  The map() method does not change the original array.
+    //
+    //  This example multiplies each array value by 2:
+    // 
+    //  var numbers1 = [45, 4, 9, 16, 25];
+    //  var numbers2 = numbers1.map(myFunction);
+    // 
+    //  function myFunction(value, index, array) {
+    //  return value * 2;
+    //  }
+
+    function ArrayMap(numbers1) {
+        var result = numbers1.map(myFunction);
+
+        function myFunction(value, index, array) {
+            return value * 2;
+        }
+        return result;
+    }
+    console.log("Array map() : " + JSON.stringify(ArrayMap(["1", "2", "3", 12, true])));
+    // interesting - string is treated like a number and result is dubled and boolean as weel true*2=2(trues)
+
+
+    // A bit reduced - is it good ?
+    function ArrayMap2(numbers1) {
+        function myFunction(value) {
+            return value * 2;
+        }
+        return numbers1.map(myFunction);
+    }
+    console.log("Array map() : " + JSON.stringify(ArrayMap2(["1", "2", "3", 12, true])));
+    // interesting - string is treated like a number and result is dubled and boolean as weel true*2=2(trues)
+
+
+    ///And so on...
+
+
+    
+    
+
+
+    //////////// JS Dates
+    //
+    // JavaScript Date Output
+    // By default, JavaScript will use the browser's time zone and display a date as a full text string:
+    //
+    // Fri Feb 01 2019 13:20:45 GMT+0100 (Central European Standard Time)
+    //
+    // There are 4 ways to create a new date object:
+    //  - new Date()
+    //  - new Date(year, month, day, hours, minutes, seconds, milliseconds)
+    //  - new Date(milliseconds)
+    //  - new Date(date string)
+    //
+
+    console.log("Date (current time) : " + new Date());
+    console.log("Date (adj time) : " + new Date(2018, 11, 24, 10, 33, 30));
+    console.log("Date (previous century) : " + new Date(99, 11, 24));
+    console.log("Date (date String) : " + new Date("October 13, 2014 11:13:00"));
+    console.log("Date (mimmiseconds) : " + new Date(100000000000));
+
+    
+    
+    
+    
+    
+    // Get Month
+    // var d = new Date();
+    // var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", // "October", "November", "December"];
+    // document.getElementById("demo").innerHTML = months[d.getMonth()];
+    
+    // console log
+    function getMonth() {
+        var d = new Date();
+        var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        return months[d.getMonth()]
+    }
+    console.log("Get Month : " + getMonth());
+    
+    
+    // dynamic input (does not make a sense but maybe you want call months differently) + time
+     function getMonth2(months, days) {
+        var d = new Date();
+        result = months[d.getMonth()] + " " + [d.getHours()] + "h" + [d.getMinutes()] + "m" +[d.getSeconds()] + "s";
+         return result;
+    }
+    console.log("Get Month : " + getMonth2(["Jan", "Feb", "Ma", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]));
+    console.log("Get Month : " + getMonth2(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]));
+    
+    
+    
+    
 
 </script>
 
